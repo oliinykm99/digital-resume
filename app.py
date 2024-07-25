@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import base64
 from config import * 
 
 
@@ -74,10 +75,10 @@ st.write("🚧", "**Quantitative Analyst | Pragma**")
 st.write("11/2023 - Present")
 st.write(
     """
-- ► Developed and implemented algorithms leveraging statistical methods for data analysis and predictive modelling, reducing analysis time by 30% while maintaining high accuracy
-- ► Collaborated closely with 2 cross-functional teams to conceptualize, design, and execute 3 impactful research initiatives
-- ► Communicated research findings and insights to key stakeholders through comprehensive reports, facilitating informed decision-making
-- ► Conducted rigorous backtesting and analysis to enhance trading algorithms, resulting in a 25% improvement in strategy performance and profitability
+- ► Developed algorithms for data analysis and predictive modeling using statistical methods, reducing analysis time by 30% with high accuracy
+- ► Collaborated with 2 cross-functional teams on 3 research initiatives
+- ► Communicated findings to stakeholders via comprehensive reports, facilitating informed decision-making
+- ► Conducted backtesting, improving trading algorithm performance by 25%
 """
 )
 
@@ -97,7 +98,7 @@ st.write(
 
 # --- JOB 3
 st.write('\n')
-st.write("🚧", "**Consulting Intern| Deloitte**")
+st.write("🚧", "**Consulting Intern | Deloitte**")
 st.write("06/2019 - 08/2019")
 st.write(
     """
@@ -108,9 +109,16 @@ st.write(
 """
 )
 
-# --- Projects & Accomplishments ---
+# --- Projects ---
 st.write('\n')
-st.subheader("Projects & Accomplishments")
+st.subheader("Projects")
 st.write("---")
 for project, link in PROJECTS.items():
     st.write(f"[{project}]({link})")
+
+# Licenses & certifications
+st.write('\n')
+st.subheader("Licenses & certifications")
+st.write("---")
+for (project, link), (key, icon) in zip(CERTIFICATIONS.items(), ICONS.items()):
+        st.markdown(f'<img src="{icon}" width="20"/> [{project}]({link})', unsafe_allow_html=True)
