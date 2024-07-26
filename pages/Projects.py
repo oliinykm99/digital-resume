@@ -34,8 +34,8 @@ with plot_cols[0]:
     url='https://github.com/oliinykm99/gmx-st-dashboard',
     styles = {
     "card": {
-        "width": "350px", 
-        "height": "350px",
+        "width": "325px", 
+        "height": "325px",
         "box-shadow": "none"},
     "filter": {
         "background-color": "rgba(0, 0, 0, 0.35)" 
@@ -50,8 +50,8 @@ with plot_cols[1]:
     url='https://github.com/oliinykm99/ETH-XGBoost-prediction',
     styles = {
     "card": {
-        "width": "350px", 
-        "height": "350px",
+        "width": "325px", 
+        "height": "325px",
         "box-shadow": "none"},
     "filter": {
         "background-color": "rgba(0, 0, 0, 0.35)" 
@@ -66,8 +66,8 @@ with plot_cols[2]:
     url='https://google.com',
     styles = {
     "card": {
-        "width": "350px", 
-        "height": "350px",
+        "width": "325px", 
+        "height": "325px",
         "box-shadow": "none"},
     "filter": {
         "background-color": "rgba(0, 0, 0, 0.35)" 
@@ -83,8 +83,8 @@ with plot_cols[0]:
     url='https://github.com/oliinykm99/United-States-Election-2020-Prediction',
     styles = {
     "card": {
-        "width": "350px", 
-        "height": "350px",
+        "width": "325px", 
+        "height": "325px",
         "box-shadow": "none"},
     "filter": {
         "background-color": "rgba(0, 0, 0, 0.35)" 
