@@ -1,9 +1,14 @@
 import streamlit as st
+import streamlit_analytics2 as streamlit_analytics
+import os 
 from PIL import Image
-import base64
+from dotenv import load_dotenv
 from config import * 
 
+load_dotenv(dotenv_path='.env')
+password = os.getenv("password")
 
+streamlit_analytics.start_tracking()
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 
@@ -122,3 +127,4 @@ st.subheader("Licenses & certifications")
 st.write("---")
 for (project, link), (key, icon) in zip(CERTIFICATIONS.items(), ICONS.items()):
         st.markdown(f'<img src="{icon}" width="20"/> [{project}]({link})', unsafe_allow_html=True)
+streamlit_analytics.stop_tracking(save_to_json='test.json', unsafe_password=password)
