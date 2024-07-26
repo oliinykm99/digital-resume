@@ -7,7 +7,7 @@ echo "Activating ${DIRECTORY}"
 source ${DIRECTORY}/bin/activate
 
 echo "Running main.py script"
-streamlit run app.py
+streamlit run Mainpage.py
 
 echo "Deactivating ${DIRECTORY}"
 deactivate

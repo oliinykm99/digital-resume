@@ -1,15 +1,17 @@
 import streamlit as st
 import streamlit_analytics2 as streamlit_analytics
-import os 
+import os
 from PIL import Image
-from dotenv import load_dotenv
 from config import * 
+from dotenv import load_dotenv
 
 load_dotenv(dotenv_path='.env')
 password = os.getenv("password")
 
 streamlit_analytics.start_tracking()
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+st.set_page_config(page_title=PAGE_TITLE,
+                   page_icon=PAGE_ICON,
+                   initial_sidebar_state='collapsed')
 
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
@@ -28,13 +30,14 @@ with col1:
 with col2:
     st.title(NAME)
     st.write(DESCRIPTION)
+    st.write("📫", EMAIL)
     st.download_button(
         label=" 📄 Download Resume",
         data=PDFbyte,
         file_name=resume_file,
         mime="application/octet-stream",
     )
-    st.write("📫", EMAIL)
+    
 
 
 # --- SOCIAL LINKS ---
@@ -114,17 +117,17 @@ st.write(
 """
 )
 
-# --- Projects ---
-st.write('\n')
-st.subheader("Projects")
-st.write("---")
-for project, link in PROJECTS.items():
-    st.write(f"[{project}]({link})")
-
-# Licenses & certifications
+# --- Licenses & certifications ---
 st.write('\n')
 st.subheader("Licenses & certifications")
 st.write("---")
 for (project, link), (key, icon) in zip(CERTIFICATIONS.items(), ICONS.items()):
         st.markdown(f'<img src="{icon}" width="20"/> [{project}]({link})', unsafe_allow_html=True)
-streamlit_analytics.stop_tracking(save_to_json='test.json', unsafe_password=password)
+streamlit_analytics.stop_tracking(save_to_json='mainpage.json', unsafe_password=password)
+
+# --- Projects ---
+st.write('\n')
+st.subheader("Projects")
+st.write("---")
+if st.button("Projects"):
+    st.switch_page("pages/Projects.py")
