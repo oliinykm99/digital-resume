@@ -65,10 +65,10 @@ st.write('\n')
 st.subheader("Hard Skills")
 st.write(
     """
-- 👩‍💻 Programming: Python (Scikit-learn, Pandas), SQL, MS Excel
-- 📊 Data Visulization: MS Excel, Matplotlib, Plotly
-- 📚 Modeling: Logistic Regression, Linear Regression, Decision Trees
-- 🗄️ Databases: GraphQL, Db2 SQL, MySQL
+- 👩‍💻 Programming: `Python (Scikit-learn, Pandas)`, `SQL`, `MS Excel`
+- 📊 Data Visulization: `MS Excel`, `Matplotlib`, `Plotly`
+- 📚 Modeling: `Logistic Regression`, `Linear Regression`, `Decision Trees`
+- 🗄️ Databases: `GraphQL`, `Db2 SQL`, `MySQL`
 """
 )
 
